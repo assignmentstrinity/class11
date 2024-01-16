@@ -9,54 +9,67 @@
 </head>
 
 <body>
-    <header>
-        Assignment of Trinity
-    </header>
 
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Contact</a>
-    </nav>
+    <header>
+        <div class="logo">
+            <img src="assignment-of-trinity-high-resolution-logo.png" alt="Logo"> <!-- Replace with your logo image -->
+        </div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Contact</a>
+            <a href="#">About Us</a>
+            <!-- Add more navigation links as needed -->
+        </nav>
+    </header>
 
     <div class="hero">
         <h1>Welcome to the Assignment of Trinity</h1>
         <p>Explore a world of exciting assignments in various subjects.</p>
+        <button onclick="navigateTo('about-us')">Learn More</button>
     </div>
 
     <main>
         <section>
             <h2>Explore Exciting Subjects</h2>
             <div class="subject-container">
-                <div class="subject" onclick="navigateTo('k')">
+                <div class="subject" onclick="navigateTo('physics')">
                     <h3>Physics</h3>
                     <p class="subject-details">Unlock the mysteries of the universe. Dive into the world of Physics and explore fascinating assignments.</p>
                 </div>
-                <div class="subject" onclick="navigateTo('k')">
+                <div class="subject" onclick="navigateTo('chemistry')">
                     <h3>Chemistry</h3>
                     <p class="subject-details">Discover the magic happening at the molecular level. Chemistry assignments await your exploration.</p>
                 </div>
-                <div class="subject" onclick="navigateTo('k')">
+                <div class="subject" onclick="navigateTo('biology')">
                     <h3>Biology</h3>
                     <p class="subject-details">Unravel the wonders of life. Delve into Biology assignments that showcase the diversity of living organisms.</p>
                 </div>
-                <div class="subject" onclick="navigateTo('k')">
+                <div class="subject" onclick="navigateTo('math')">
                     <h3>Math</h3>
                     <p class="subject-details">Sharpen your analytical skills. Math assignments designed to challenge and enhance your mathematical prowess.</p>
                 </div>
+                <!-- Add more subjects as needed -->
             </div>
         </section>
     </main>
 
-    <footer>
-        &copy; 2024 Assignment of Trinity. All rights reserved.
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Assignment of Trinity. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#" target="_blank"><img src="facebook-icon.png" alt="Facebook"></a>
+                <a href="#" target="_blank"><img src="twitter-icon.png" alt="Twitter"></a>
+                <!-- Add more social icons as needed -->
+            </div>
+        </div>
     </footer>
 
     <script>
-        function navigateTo(subject) {
-            // Redirect to the subject assignments page or update content dynamically
-            window.location.href = subject;
+        function navigateTo(page) {
+            window.location.href = page + '.html';
         }
     </script>
+
 </body>
 
 </html>

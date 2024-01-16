@@ -1,0 +1,69 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    color: white;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #111;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+section {
+    text-align: center;
+    margin: 20px;
+}
+
+button {
+    margin: 10px;
+    padding: 15px 30px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+button:hover {
+    background-color: #555;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+button span.not-available {
+    font-weight: bold;
+    color: #ff4d4d;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #111;
+    color: white;
+}
+
+/* Optional: Add a hover effect for the footer */
+footer:hover {
+    background-color: #333;
+}
+
+/* Neon Glow Effect */
+@keyframes neonGlow {
+    from {
+        text-shadow: 0 0 10px rgba(0, 255, 0, 0.8), 0 0 20px rgba(0, 255, 0, 0.8), 0 0 30px rgba(0, 255, 0, 0.8);
+    }
+    to {
+        text-shadow: 0 0 20px rgba(0, 255, 0, 1), 0 0 30px rgba(0, 255, 0, 1), 0 0 40px rgba(0, 255, 0, 1);
+    }
+}
+
+button:hover, button:hover span.not-available {
+    animation: neonGlow 1s ease-in-out infinite alternate;
+}

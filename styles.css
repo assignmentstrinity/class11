@@ -1,60 +1,183 @@
-body {
-    font-family: 'Arial', sans-serif;
+/* Reset CSS */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4; /* Light gray background */
-    color: #333; /* Dark text color */
-    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
 }
 
 header {
-    background-color: #333; /* Dark gray header */
-    color: white;
-    padding: 20px;
-    text-align: center;
+    background-color: #3498db; /* Light blue header */
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-section {
+.logo img {
+    width: 100px;
+    height: auto;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    border: 2px solid #fff;
+}
+
+nav a:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+}
+
+.hero {
+    background: linear-gradient(45deg, #3498db, #87CEFA); /* Gradient from light blue to sky blue */
+    color: white;
     text-align: center;
-    margin: 20px;
+    padding: 50px 20px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
 }
 
 button {
-    margin: 10px;
-    padding: 15px 30px;
-    background-color: #3498db; /* Blue button */
-    color: white;
+    background-color: #fff;
+    color: #3498db; /* Light blue button text */
+    padding: 15px 25px;
     border: none;
     border-radius: 5px;
+    font-size: 1em;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 6px 10px rgba(52, 152, 219, 0.3);
+    transition: background-color 0.3s, color 0.3s;
 }
 
 button:hover {
-    background-color: #2980b9; /* Slightly darker blue on hover */
-    transform: translateY(-2px); /* Button slightly moves up on hover */
-    box-shadow: 0 8px 15px rgba(52, 152, 219, 0.5);
+    background-color: #2980b9; /* Darker blue on hover */
+    color: #fff;
 }
 
-button span.not-available {
-    font-weight: bold;
-    color: #e74c3c; /* Red for not available text */
+.subject-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
-footer {
-    text-align: center;
+.subject {
+    flex: 1;
     padding: 20px;
-    background-color: #333; /* Dark gray footer */
+    background: linear-gradient(45deg, #87CEFA, #00BFFF); /* Gradient from sky blue to deep sky blue */
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #fff;
+}
+
+.subject:hover {
+    background: linear-gradient(45deg, #00BFFF, #1E90FF); /* Gradient from deep sky blue to dodger blue on hover */
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3498db; /* Light blue footer */
+    padding: 20px;
     color: white;
 }
 
-/* Optional: Add a hover effect for the footer */
-footer:hover {
-    background-color: #555; /* Slightly lighter gray on hover */
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    transition: transform 0.3s;
 }
 
-/* Simple transition on hover */
-button:hover, button:hover span.not-available {
-    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+.social-icons img:hover {
+    transform: scale(1.2);
 }
+
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .subject {
+        flex: 100%;
+    }
+}
+/* ... (previous styles remain unchanged) ... */
+
+.logo img {
+    width: 100px;
+    height: 100px; /* Set the height equal to the width to create a circular shape */
+    object-fit: cover; /* Ensure the image covers the entire circular area */
+    border-radius: 50%; /* Create a circular border-radius */
+}
+
+/* ... (remaining styles remain unchanged) ... */
+/* ... (previous styles remain unchanged) ... */
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #3498db; /* Light blue footer */
+    color: white;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content p {
+    flex: 1;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+/* ... (remaining styles remain unchanged) ... */

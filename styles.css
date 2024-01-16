@@ -22,22 +22,24 @@ section {
 button {
     margin: 10px;
     padding: 15px 30px;
-    background-color: #555; /* Darker gray button */
+    background-color: #3498db; /* Blue button */
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s, box-shadow 0.3s;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 6px 10px rgba(52, 152, 219, 0.3);
 }
 
 button:hover {
-    background-color: #777; /* Slightly lighter gray on hover */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: #2980b9; /* Slightly darker blue on hover */
+    transform: translateY(-2px); /* Button slightly moves up on hover */
+    box-shadow: 0 8px 15px rgba(52, 152, 219, 0.5);
 }
 
 button span.not-available {
     font-weight: bold;
-    color: #ff4d4d; /* Red for not available text */
+    color: #e74c3c; /* Red for not available text */
 }
 
 footer {
@@ -54,5 +56,5 @@ footer:hover {
 
 /* Simple transition on hover */
 button:hover, button:hover span.not-available {
-    transition: background-color 0.3s, box-shadow 0.3s;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
 }
